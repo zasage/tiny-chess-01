@@ -11,6 +11,8 @@ HTTP loop over $MAKEFUN_ENV_URL, UCI moves, 10 s/move, 1.800 s/trial.
 ## Practice Elo (6 games vs depth-2, depth-3, depth-4, nodes-100k/250k/500k)
 - v9 (ND0 28.000): trial-0 **1.279** (2W 2D 2L), trial-1 997,
   trial-2 1.099. Mean ~1.125. Floor 1.154 is read from trial-0 only.
+  Packed main.py re-ran trial-0: IDENTICAL 1.279 (2W 2D 2L, 218 plies
+  to spare), no time loss. No timeout in 18 practice games total.
 - Earlier: v1 997, v2 708, v4 (30k) 1.191/997, v5 (40k) 1.191/1.099
   but 4 time losses in trial-1, v6 (25k) 1.099, v7/v10 rejected.
 - Key bug found: TT flag stored backwards (fail-high as EXACT); fix +200.
